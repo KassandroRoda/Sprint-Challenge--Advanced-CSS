@@ -1,9 +1,21 @@
 // Home Content
 
+.uptop {
+  .layout(column, center, center);
+  .sizing(100%,100px);
+  background-color: @sea-shell;
+  h1 {
+      font-size: 3rem;
+  }
+}
+
 .home {
 
   .intro {
-
+    img.header-img {
+      .sizing(100%, 200px);
+    }
+  
     h2 {
       padding: 15px;
     }
@@ -19,6 +31,18 @@
     flex-wrap: wrap;
     width: 100%;
 
+    #one {
+      @media @phone {
+        .sizing(90%, 300px);
+      }
+    }
+
+   #two, #three {
+     @media @phone {
+       display: none;
+     }
+   }
+
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -27,6 +51,7 @@
     }
   }
 
+ 
   .visit-planets {
     padding: 15px;
 
@@ -37,6 +62,7 @@
     p {
       margin-top: 13px;
     }
+
   }
 
   .walk {
@@ -46,24 +72,59 @@
     display: flex;
     justify-content: center;
 
-    .walk-text {
-      width: 50%;
+    @media @phone {
+      .layout(column-reverse, center, center);
+      margin-top: 10px;
+    }
 
+    .walk-text {
+
+      @media @phone {
+        .sizing(130%,100%);
+        margin-top: 10px;
+      }
+
+      width: 50%;
       h3 {
         margin-bottom: 10px;
       }
 
       p {
         margin-bottom: 26px;
+    
       }
 
-      .btn {
+      .btn button {
+        // error
+        button:hover {
+          background-color: @sea-shell;
+          color: black;
+        } // 
+        .button-style;
+
+        @media @phone {
+          width: 100%;
+          height: 50px;
+        }
       }
     }
+
+//Sign In Page //
+
+
+
+
+
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        .sizing(130%, 100%);
+        margin-bottom: 10px;
+        margin-left: 0%;
+      }
       
       img {
         width: 100%;
